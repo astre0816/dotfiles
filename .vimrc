@@ -21,14 +21,12 @@ call dein#begin(s:dein_dir)
 call dein#add('Shougo/dein.vim')
 
 " Add or remove your plugins here:
-call dein#add('w0rp/ale')
-call dein#add('airblade/vim-gitgutter')
-call dein#add('tpope/vim-fugitive')
-call dein#add('scrooloose/nerdtree')
-call dein#add('tyru/caw.vim.git')
-call dein#add('itchyny/lightline.vim')
-call dein#add('carlson-erik/wolfpack')
-call dein#add('miyakogi/seiya.vim')
+call dein#add('w0rp/ale') "構文チェック
+call dein#add('airblade/vim-gitgutter') "git差分マーカー
+call dein#add('tyru/caw.vim.git') "コメントアウトトグル
+call dein#add('itchyny/lightline.vim') "ステータスラインカスタマイズ
+call dein#add('carlson-erik/wolfpack') "カラースキーマ
+call dein#add('miyakogi/seiya.vim') "背景透過
 
 " You can specify revision/branch/tag.
 call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
@@ -105,7 +103,9 @@ set list listchars=tab:▸\ ,eol:\ ,extends:»,precedes:«,nbsp:%
 "81桁目に色を付ける
 set colorcolumn=81
 "折りたたみ設定
-set foldmethod=indent foldlevel=100
+set foldmethod=indent foldlevel=99
+"javaファイルの場合はメソッドを閉じる
+autocmd FileType java setl foldlevel=1
 "-------------------------------------------------------------
 
 
@@ -116,6 +116,8 @@ set nrformats-=octal
 set clipboard=unnamed,autoselect
 ":makeコマンドと:nextコマンドを実行したときに自動保存
 set autowrite
+"行末の空白を削除
+autocmd BufWritePre * :%s/\s\+$//ge
 "-------------------------------------------------------------
 
 
