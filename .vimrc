@@ -103,7 +103,7 @@ set list listchars=tab:▸\ ,eol:\ ,extends:»,precedes:«,nbsp:%
 "81桁目に色を付ける
 set colorcolumn=81
 "折りたたみ設定
-set foldmethod=indent foldlevel=99
+set foldmethod=syntax foldlevel=99
 "javaファイルの場合はメソッドを閉じる
 autocmd FileType java setl foldlevel=1
 "-------------------------------------------------------------
@@ -184,6 +184,10 @@ set background=dark
 autocmd ColorScheme * highlight SpecialKey ctermbg=none
 "コメントの色を変更
 autocmd ColorScheme * highlight Comment ctermfg=62
+"検索結果の色を変更
+autocmd ColorScheme * highlight Search ctermfg=235 ctermbg=116
+"折りたたまれた行の色を変更
+autocmd ColorScheme * highlight Folded ctermfg=86
 "カラースキーム設定
 colorscheme wolfpack
 "-------------------------------------------------------------
