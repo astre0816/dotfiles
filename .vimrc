@@ -103,11 +103,9 @@ set list listchars=tab:▸\ ,eol:\ ,extends:»,precedes:«,nbsp:%
 "81桁目に色を付ける
 set colorcolumn=81
 "折りたたみ設定
-set foldmethod=syntax foldlevel=99
-"javaファイルの場合はメソッドを閉じる
-autocmd FileType java setl foldlevel=1
-"jsファイルの場合はfoldmethodをindentにする
-autocmd FileType javascript setl foldmethod=indent
+set foldmethod=indent foldlevel=99
+"javaファイルの場合はfoldmethodをsyntaxとし、クラス内のメソッド等を閉じる
+autocmd FileType java setl foldmethod=syntax foldlevel=1
 "foldmethod=syntaxのとき、インサートモード時には折りたたみの再計算を行わない
 augroup foldmethod-syntax
 	autocmd!
