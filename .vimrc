@@ -106,6 +106,18 @@ set colorcolumn=81
 set foldmethod=syntax foldlevel=99
 "javaファイルの場合はメソッドを閉じる
 autocmd FileType java setl foldlevel=1
+"jsファイルの場合はfoldmethodをindentにする
+autocmd FileType javascript setl foldmethod=indent
+"foldmethod=syntaxのとき、インサートモード時には折りたたみの再計算を行わない
+augroup foldmethod-syntax
+	autocmd!
+	autocmd InsertEnter * if &l:foldmethod ==# 'syntax'
+				\ | setlocal foldmethod=manual
+				\ | endif
+	autocmd InsertLeave * if &l:foldmethod ==# 'manual'
+				\ | setlocal foldmethod=syntax
+				\ | endif
+augroup END
 "-------------------------------------------------------------
 
 
