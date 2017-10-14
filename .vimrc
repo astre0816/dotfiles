@@ -104,6 +104,8 @@ set list listchars=tab:▸\ ,eol:\ ,extends:»,precedes:«,nbsp:%
 set colorcolumn=81
 "折りたたみ設定
 set foldmethod=indent foldlevel=99
+"水平移動したときに折りたたみを自動で開かない
+set foldopen-=hor
 "javaファイルの場合はfoldmethodをsyntaxとし、クラス内のメソッド等を閉じる
 autocmd FileType java setl foldmethod=syntax foldlevel=1
 "foldmethod=syntaxのとき、インサートモード時には折りたたみの再計算を行わない
@@ -207,10 +209,6 @@ colorscheme wolfpack
 "ノーマルモード---------------------------------------------
 "Yで行末までヤンク
 nnoremap Y y$
-"<Esc>2回でハイライト解除
-nnoremap <Esc><Esc> :noh<Cr>
-"<C-[>2回でもハイライト解除
-nnoremap <C-[><C-[> :noh<Cr>
 "<S-h>で行頭に移動
 nnoremap <S-h> ^
 "<S-l>で行末に移動
