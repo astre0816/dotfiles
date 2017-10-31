@@ -102,6 +102,8 @@ set showtabline=2
 set list listchars=tab:▸\ ,eol:\ ,extends:»,precedes:«,nbsp:%
 "81桁目に色を付ける
 set colorcolumn=81
+"スペルチェック
+set spell spelllang=en,cjk
 "折りたたみ設定
 set foldmethod=indent foldlevel=99
 "水平移動したときに折りたたみを自動で開かない
@@ -200,6 +202,9 @@ autocmd ColorScheme * highlight Comment ctermfg=62
 autocmd ColorScheme * highlight Search ctermfg=235 ctermbg=116
 "折りたたまれた行の色を変更
 autocmd ColorScheme * highlight Folded ctermfg=86
+"スペルチェックのハイライトを下線のみに
+autocmd ColorScheme * highlight clear SpellBad
+autocmd ColorScheme * highlight SpellBad cterm=underline
 "カラースキーム設定
 colorscheme wolfpack
 "-------------------------------------------------------------
