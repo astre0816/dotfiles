@@ -216,10 +216,10 @@ colorscheme wolfpack
 nnoremap Y y$
 "<S-h>で行頭に移動
 nnoremap <S-h> ^
+vnoremap <S-h> ^
 "<S-l>で行末に移動
 nnoremap <S-l> $
-"<C-a>で全選択
-nnoremap <C-a> ggVG
+vnoremap <S-l> $
 "ZZ(保存して閉じる)を無効化
 nnoremap ZZ <Nop>
 "ZQ(保存せずに閉じる)を無効化
@@ -245,26 +245,20 @@ let g:NERDTreeShowHidden = 1
 
 "caw.vim----------------------------------------------------
 "行のタブを除く最初の文字の前にコメント文字をトグル
-nmap <C-_><C-_> <Plug>(caw:hatpos:toggle)
-vmap <C-_><C-_> <Plug>(caw:hatpos:toggle)
-"行頭にコメントをトグル
-nmap <C-_>h <Plug>(caw:zeropos:toggle)
-vmap <C-_>h <Plug>(caw:zeropos:toggle)
+nmap <C-_> <Plug>(caw:hatpos:toggle)
+vmap <C-_> <Plug>(caw:hatpos:toggle)
 "-----------------------------------------------------------
 
 "ale--------------------------------------------------------
 "シンボルを変更する
 let g:ale_sign_error = '!!'
 let g:ale_sign_warning = '=='
-"シンボルのハイライトを変更する
-" autocmd ColorScheme * highlight ALEErrorSign ctermfg=WHITE
-" autocmd ColorScheme * highlight ALEWarningSign ctermfg=WHITE
 "ファイル保存時のみチェックする
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 0
 let g:ale_lint_on_enter = 0
 "エラー間の移動を定義
-nmap <C-k> <Plug>(ale_previous_wrap)
-nmap <C-j> <Plug>(ale_next_wrap)
+nmap [e <Plug>(ale_previous_wrap)
+nmap ]e <Plug>(ale_next_wrap)
 "-----------------------------------------------------------
 "-------------------------------------------------------------
