@@ -23,6 +23,7 @@ call dein#add('Shougo/dein.vim')
 " Add or remove your plugins here:
 call dein#add('w0rp/ale') "構文チェック
 call dein#add('airblade/vim-gitgutter') "git差分マーカー
+call dein#add('tpope/vim-fugitive') "vim上でgitを使用するためのラッパー
 call dein#add('tyru/caw.vim.git') "コメントアウトトグル
 call dein#add('itchyny/lightline.vim') "ステータスラインカスタマイズ
 call dein#add('carlson-erik/wolfpack') "カラースキーマ
