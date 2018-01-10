@@ -29,6 +29,7 @@ call dein#add('itchyny/lightline.vim') "ステータスラインカスタマイ�
 call dein#add('carlson-erik/wolfpack') "カラースキーマ
 call dein#add('miyakogi/seiya.vim') "背景透過
 call dein#add('astre0816/asyncute.vim') "シェルコマンド非同期実行 *自作
+call dein#add('lervag/vimtex') "LaTeXプラグイン
 
 " You can specify revision/branch/tag.
 call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
