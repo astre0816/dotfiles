@@ -1,0 +1,32 @@
+[[plugins]] # plugin manager
+repo = 'Shougo/dein.vim'
+
+[[plugins]] # toml syntax
+repo = 'cespare/vim-toml'
+on_ft = 'toml'
+
+[[plugins]] # color scheme
+repo = 'dracula/vim'
+hook_add = '''
+    set background=dark
+    autocmd UserAutoCmd VimEnter * nested colorscheme dracula
+'''
+
+[[plugins]] # git operation in vim
+repo = 'tpope/vim-fugitive'
+
+[[plugins]] # git difference marker
+repo = 'airblade/vim-gitgutter'
+
+[[plugins]] # custom status line
+repo = 'itchyny/lightline.vim'
+hook_add = '''
+    call user#lightline#init()
+'''
+
+[[plugins]] # comment out toggle
+repo = 'tyru/caw.vim.git'
+hook_add = '''
+    nmap <C-_> <Plug>(caw:hatpos:toggle)
+    vmap <C-_> <Plug>(caw:hatpos:toggle)
+'''
