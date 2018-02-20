@@ -25,8 +25,14 @@ hook_add = '''
 '''
 
 [[plugins]] # comment out toggle
-repo = 'tyru/caw.vim.git'
+repo = 'tyru/caw.vim'
 hook_add = '''
     nmap <C-_> <Plug>(caw:hatpos:toggle)
     vmap <C-_> <Plug>(caw:hatpos:toggle)
+'''
+
+[[plugins]] # run async shell commands
+repo = 'skywind3000/asyncrun.vim'
+hook_add = '''
+    autocmd UserAutoCmd QuickFixCmdPost * botright copen 8
 '''
