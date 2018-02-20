@@ -36,3 +36,7 @@ repo = 'skywind3000/asyncrun.vim'
 hook_add = '''
     autocmd UserAutoCmd QuickFixCmdPost * botright copen 8
 '''
+
+[[plugins]] # kotlin syntax
+repo = 'udalov/kotlin-vim'
+on_ft = 'kotlin'
