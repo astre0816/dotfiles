@@ -125,3 +125,19 @@ set smartcase
 " return top of file if reach end of file
 set wrapscan
 " End search and replace ----------------------
+
+
+" key mapping ---------------------------------
+" yank from current position to end of the line by Y
+nnoremap Y y$
+" move start of current line by <S-h>
+nnoremap <S-h> ^
+vnoremap <S-h> ^
+" move end of current line by <S-l>
+nnoremap <S-l> $
+vnoremap <S-l> $
+" disable ZZ (close with saving)
+nnoremap ZZ <Nop>
+" disable ZQ (close without saving)
+nnoremap ZQ <Nop>
+" End key mapping -----------------------------
