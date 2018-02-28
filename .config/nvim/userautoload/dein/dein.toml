@@ -25,7 +25,7 @@ hook_add = '''
 '''
 
 [[plugins]] # comment out toggle
-repo = 'tyru/caw.vim'
+repo = 'tyru/caw.vim.git'
 hook_add = '''
     nmap <C-_> <Plug>(caw:hatpos:toggle)
     vmap <C-_> <Plug>(caw:hatpos:toggle)
