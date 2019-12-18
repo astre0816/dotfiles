@@ -1,4 +1,5 @@
 #!/bin/sh
 
-# ln -sf ~/dotfiles/.vimrc ~/.vimrc
-ln -sf ~/dotfiles/.config/nvim ~/.config/nvim
+ln -sf ~/dotfiles/.config/ ~/.config
+ln -sf ~/.config/nvim ~/.vim
+ln -sf ~/.config/nvim/init.vim ~/.vimrc
