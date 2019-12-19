@@ -26,4 +26,6 @@ set laststatus=2
 set noshowmode
 
 " set timer
-call timer_start(1000, 'lightline_rc#updateTabline', {'repeat': -1})
+if !empty(globpath(&rtp, 'plugin/lightline.vim'))
+    call timer_start(1000, 'lightline_rc#updateTabline', {'repeat': -1})
+endif
