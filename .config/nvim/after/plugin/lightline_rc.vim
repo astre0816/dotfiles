@@ -10,7 +10,7 @@ let g:lightline.tab.inactive = []
 let g:lightline.tab.active = ['tabname']
 
 let g:lightline.component_function = {
-            \    'cd': 'lightline_rc#getCurentDirectory',
+            \    'cd': 'lightline_rc#getCurrentDirectory',
             \    'time': 'lightline_rc#getLocalTime'
             \ }
 
