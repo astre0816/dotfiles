@@ -20,3 +20,6 @@ nnoremap ZZ <Nop>
 
 " disable ZQ (close without saving)
 nnoremap ZQ <Nop>
+
+" :E -> :e %:h/
+command! E call feedkeys(":e " . expand("%:h") . "/\<C-d>")
