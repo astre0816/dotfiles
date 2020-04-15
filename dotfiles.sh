@@ -1,5 +1,5 @@
 #!/bin/sh
-d=`dirname $0`
+d=$(cd $(dirname $0); pwd)
 mkdir -p ~/.config 2>/dev/null
 ln -sf $d/.config/nvim ~/.config/nvim
 ln -sf $d/.config/nvim ~/.vim
