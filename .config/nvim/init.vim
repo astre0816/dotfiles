@@ -21,6 +21,6 @@ Plug 'itchyny/lightline.vim'
 Plug 'w0rp/ale'
 "buffer explorer
 Plug 'jlanzarotta/bufexplorer'
-"LSP Clinet
+"LSP Client
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()

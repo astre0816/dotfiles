@@ -1,3 +1,5 @@
+" set <leader>
+let leader = "\<SPACE>"
 " yank from current position to end of the line by Y
 nnoremap Y y$
 

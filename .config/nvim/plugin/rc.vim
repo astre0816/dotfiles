@@ -31,7 +31,7 @@ set confirm
 set title
 " show line number
 set number
-set relativenumber
+"set relativenumber
 " show cursor position
 set ruler
 " set vertical offset
@@ -64,6 +64,12 @@ augroup foldmethod-syntax
                 \ | setlocal foldmethod=syntax
                 \ | endif
 augroup END
+" set updatetime faster (default is 40000)
+set updatetime=300
+" always show signcolumns
+set signcolumn=yes
+" don't give |ins-completion-menu| messages
+set shortmess+=c
 " End appearance ------------------------------
 
 
@@ -96,7 +102,6 @@ set guicursor=
 " cursor --------------------------------------
 " don't limit Backspace key
 set backspace=indent,eol,start
-"矩形選択時に文字のないところへカーソル移動できるようにする
 " don't limit moving in rectangle visual mode
 set virtualedit=block
 " End cursor -----------------------------------
@@ -123,6 +128,6 @@ set ignorecase
 set smartcase
 " return top of file if reach end of file
 set wrapscan
+" show count of search results [n/N]
+set shortmess-=S
 " End search and replace ----------------------
-
-
