@@ -17,8 +17,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 "custom status line
 Plug 'itchyny/lightline.vim'
-"asynchronous syntax checker
-Plug 'w0rp/ale'
 "buffer explorer
 Plug 'jlanzarotta/bufexplorer'
 "LSP Client
