@@ -1,22 +1,8 @@
-let g:lightline = {}
-let g:lightline.colorscheme = 'dracula'
-
-let g:lightline.tabline = {}
-let g:lightline.tabline.left = [['bufnum', 'tabs']]
-let g:lightline.tabline.right = [[], ['time'], ['cd']]
-
-let g:lightline.tab = {}
-let g:lightline.tab.inactive = []
-let g:lightline.tab.active = ['tabname']
-
-let g:lightline.component_function = {
-            \    'cd': 'lightline_rc#getCurrentDirectory',
-            \    'time': 'lightline_rc#getLocalTime'
-            \ }
-
-let g:lightline.tab_component_function = {
-            \    'tabname': 'lightline_rc#getTabName'
-            \ }
+" read config from json file
+let s:configfile = '$HOME/.vim/after/plugin/lightline_rc.json'
+let s:configlines = readfile(expand(s:configfile))
+let s:configstr = join(s:configlines)
+let g:lightline = json_decode(s:configstr)
 
 
 " show status bar

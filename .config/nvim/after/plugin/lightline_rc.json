@@ -1,0 +1,18 @@
+{
+    "colorscheme": "dracula",
+    "tabline": {
+        "left": [["bufnum", "tabs"]],
+        "right": [[], ["time"], ["cd"]]
+    },
+    "tab": {
+        "active": ["tabname"],
+        "inactive": []
+    },
+    "component_function": {
+        "cd": "lightline_rc#getCurrentDirectory",
+        "time": "lightline_rc#getLocalTime"
+    },
+    "tab_component_function": {
+        "tabname": "lightline_rc#getTabName"
+    }
+}
