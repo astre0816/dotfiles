@@ -131,3 +131,7 @@ set wrapscan
 " show count of search results [n/N]
 set shortmess-=S
 " End search and replace ----------------------
+
+" sound ---------------------------------------
+set belloff=all
+" End sound -----------------------------------
