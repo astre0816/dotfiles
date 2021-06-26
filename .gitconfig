@@ -7,3 +7,5 @@
 	diff = auto
 	status = auto
 	branch = auto
+[status]
+	showUntrackedFiles = all
